@@ -26,7 +26,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    if(field->isWidgetType()){
+    if(field != NULL){
         delete field;
     }
     int w = ui->spinBox->value() * 50;

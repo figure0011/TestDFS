@@ -58,19 +58,20 @@ void Field::generate()
 void Field::dfsSolve(){
 
 
-    if (dfsR != NULL)
-        scene()->removeItem(dfsR);
+    // if (dfsR != NULL)
+    //     scene()->removeItem(dfsR);
 
-    delete dfsR;
+    // delete dfsR;
     dfsR = NULL;
     dfsR = new QGraphicsRectItem(1, 1, 1, 1);
     scene()->addItem(dfsR);
 
-    if (dfs != NULL)
-    {
-        delete dfs;
-        dfs = NULL;
-    }
+    // if (dfs != NULL)
+    // {
+    //     delete dfs;
+        
+    // }
+    dfs = NULL;
     dfs = new DFS(startCell->getX(),startCell->getY(), finishCell->getX(),finishCell->getY(), maze, dfsR, scene());
     dfs->solve();
 
